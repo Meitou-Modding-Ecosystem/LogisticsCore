@@ -27,6 +27,7 @@ jobs:
           dotnet-version: 11.0.x
       - name: Build Play into a stand-in mods folder and check what it deployed
         run: |
+          shopt -s nullglob # a repo with no mod yet (a library) deploys nothing
           mods="$RUNNER_TEMP/mods"
           mkdir -p "$mods"
           dotnet build Play/Play.csproj -p:KenshiModsDir="$mods/"
