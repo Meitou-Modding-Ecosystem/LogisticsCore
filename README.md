@@ -1,7 +1,7 @@
 # Logistics Core
 
 The logistics framework for [MeitouClient](https://github.com/Meitou-Modding-Ecosystem/MeitouClient) mods: nodes, edges, owners, stock and
-transports, which War Orchestration and its implementations build on (design: Meitou-Modding-Ecosystem/MeitouMods#59). So far it holds
+transports, which War Orchestration and its implementations build on (design: Meitou-Modding-Ecosystem/RivalryCore#59). So far it holds
 vanilla node seeding: every placed town as a node with its id, owner and possible owners ([docs/vanilla-nodes.md](docs/vanilla-nodes.md)).
 Owners: @aaallleeeccc and @TheIvoryDisaster. GPL-3.0-or-later.
 

@@ -1,8 +1,8 @@
 # Vanilla nodes (seeding for Logistics Core)
 
-**Status: built; the first part of Logistics Core (Meitou-Modding-Ecosystem/MeitouMods#59).** A small library, `LogisticsSeed` (namespace
+**Status: built; the first part of Logistics Core (Meitou-Modding-Ecosystem/RivalryCore#59).** A small library, `LogisticsSeed` (namespace
 `Logistics.Seed`), that turns the loaded game's placed towns into nodes: each with its stable id, its owner, and the owners the game's own town
-versions allow. It is the "every node needs a list of possible owners" gap from Meitou-Modding-Ecosystem/MeitouMods#59, filled from vanilla data, so
+versions allow. It is the "every node needs a list of possible owners" gap from Meitou-Modding-Ecosystem/RivalryCore#59, filled from vanilla data, so
 mods extend real lists rather than guess. Not a mod yet: the framework builds on it. Owner: @aaallleeeccc.
 
 ## Use
@@ -29,7 +29,7 @@ As the engine switches towns (`PopulationSystem`'s override choice, `TownSite.Re
 - a version's conditions are its `world state` links that are real WORLD_EVENT_STATEs, as the engine counts them;
 - a version reached twice is listed once, so chains that loop back to the base town end.
 
-Owners added by other mods stay the framework's job (Meitou-Modding-Ecosystem/MeitouMods#59: a mod adds a faction with the town version it shows under; removing one is a
+Owners added by other mods stay the framework's job (Meitou-Modding-Ecosystem/RivalryCore#59: a mod adds a faction with the town version it shows under; removing one is a
 deliberate call). This list is the vanilla default they extend.
 
 ## On the base game's data

@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <!--
-    Vanilla node seeding for Logistics Core (Meitou-Modding-Ecosystem/MeitouMods#59, docs/vanilla-nodes.md): every placed town as a node with its
+    Vanilla node seeding for Logistics Core (Meitou-Modding-Ecosystem/RivalryCore#59, docs/vanilla-nodes.md): every placed town as a node with its
     stable id, its owner and the owners the game's own town versions allow. A library, not a mod: the Logistics Core framework builds on it. Built
     against the game's assemblies.
   -->
