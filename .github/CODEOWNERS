@@ -1,10 +1,4 @@
 # Owners must approve PRs touching their paths. Later lines win.
+# Any one of the listed owners can give the code-owner approval.
 
-*                         @aaallleeeccc @TheIvoryDisaster
-
-# Shared build, CI and the engine pin: maintainers.
-/.github/                 @TheIvoryDisaster
-/engine                   @TheIvoryDisaster
-/.gitmodules              @TheIvoryDisaster
-/Directory.Build.props    @TheIvoryDisaster
-/Play/                    @TheIvoryDisaster
+*                         @TheIvoryDisaster @aaallleeeccc @PZA-Mods-bot @mattresspad
