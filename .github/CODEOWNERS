@@ -1,0 +1,10 @@
+# Owners must approve PRs touching their paths. Later lines win.
+
+*                         @aaallleeeccc @TheIvoryDisaster
+
+# Shared build, CI and the engine pin: maintainers.
+/.github/                 @TheIvoryDisaster
+/engine                   @TheIvoryDisaster
+/.gitmodules              @TheIvoryDisaster
+/Directory.Build.props    @TheIvoryDisaster
+/Play/                    @TheIvoryDisaster
