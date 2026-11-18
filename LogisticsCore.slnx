@@ -1,8 +1,8 @@
 <Solution>
   <Project Path="Play/Play.csproj" />
-  <Folder Name="/ExampleMod/">
-    <Project Path="ExampleMod/ExampleMod.csproj" />
-    <Project Path="ExampleMod.Tests/ExampleMod.Tests.csproj" />
+  <Folder Name="/LogisticsCore/">
+    <Project Path="LogisticsSeed/LogisticsSeed.csproj" />
+    <Project Path="LogisticsSeed.Tests/LogisticsSeed.Tests.csproj" />
   </Folder>
   <Folder Name="/engine/">
     <Project Path="engine/src/Meitou.Core/Meitou.Core.csproj" />
