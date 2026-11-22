@@ -1,12 +1,12 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
-  <!-- The mod's tests: synthetic worlds only, no game install needed. -->
+  <!-- Vanilla edge seeding's tests (docs/vanilla-edges.md): places and roads made in memory, no game install needed. -->
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
     <IsPackable>false</IsPackable>
     <IsTestProject>true</IsTestProject>
-    <RootNamespace>ExampleMod.Tests</RootNamespace>
+    <RootNamespace>Logistics.Edges.Tests</RootNamespace>
   </PropertyGroup>
 
   <ItemGroup>
@@ -20,8 +20,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="$(MeitouEngineDir)src/Meitou.Game/Meitou.Game.csproj" />
-    <ProjectReference Include="../ExampleMod/ExampleMod.csproj" />
+    <ProjectReference Include="$(MeitouEngineDir)src/Meitou.Simulation/Meitou.Simulation.csproj" />
+    <ProjectReference Include="../LogisticsEdges/LogisticsEdges.csproj" />
   </ItemGroup>
 
 </Project>
