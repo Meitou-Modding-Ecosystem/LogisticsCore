@@ -12,8 +12,9 @@ Owners: @aaallleeeccc and @TheIvoryDisaster. GPL-3.0-or-later.
 
 ## Layout
 
-- `engine/`: MeitouClient as a git submodule, pinned to the engine commit the mod builds against. After a pull that moves it:
-  `git submodule update --init`.
+- `engine/`: MeitouClient as a git submodule, pinned to the engine commit the mod builds against. `git pull` does not move it: after
+  every pull run `powershell -ExecutionPolicy Bypass -File tools\Update-Local.ps1 -Clean -Build`
+  ([keep clones current](docs/local-development.md#keep-clones-current)).
 - `LogisticsSeed/`: vanilla node seeding, a library (no `meitou.json` yet). `LogisticsSeed.Tests/`: its tests (towns made in memory, no game
   install needed).
 - `LogisticsEdges/`: vanilla edge seeding, a library. `LogisticsEdges.Tests/`: its tests (places and roads made in memory, no game install
