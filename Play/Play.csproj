@@ -73,7 +73,7 @@
              RemoveProperties="CurrentSolutionConfigurationContents" />
   </Target>
 
-  <!-- Copies each mod's assembly, symbols and manifest; skipped (with a message) when the mods folder doesn't exist, as on CI. -->
+  <!-- Copies each mod's assemblies, symbols and manifest; skipped (with a message) when the mods folder doesn't exist, as on CI. -->
   <Target Name="PlayDeploy" AfterTargets="PlayBuildMods;PlayBuildEngineInVisualStudio" DependsOnTargets="PlayModFiles" Condition="'$(PlayDeploy)' == 'true'">
     <MakeDir Directories="@(PlayMod->'$(KenshiModsDir)%(ModName)');@(PlayFrameworkProject->'$(KenshiModsDir)%(ModName)')" />
     <Copy SourceFiles="@(PlayModFile)" DestinationFiles="@(PlayModFile->'$(KenshiModsDir)%(ModName)/%(Filename)%(Extension)')" SkipUnchangedFiles="true" />
@@ -95,11 +95,14 @@
     <Message Importance="high" Text="Mods not deployed: no folder $(KenshiModsDir) (set KenshiModsDir or KENSHI_PATH)." />
   </Target>
 
+  <!-- Every assembly and symbol file in a mod's output (its own, and the contract or private libraries it ships; the game's are never copied local). -->
   <Target Name="PlayModFiles" DependsOnTargets="PlayFindMods">
     <ItemGroup>
       <_PlayModOutput Include="@(PlayMod->'%(RootDir)%(Directory)bin/$(PlayConfiguration)/$(TargetFramework)/%(ModName)')" />
       <_PlayModOutput Include="@(PlayFrameworkProject->'%(RootDir)%(Directory)bin/$(PlayConfiguration)/$(TargetFramework)/%(ModName)')" />
-      <PlayModFile Include="@(_PlayModOutput->'%(Identity).dll');@(_PlayModOutput->'%(Identity).pdb');@(_PlayModOutput->'%(RootDir)%(Directory)meitou.json')" />
+      <PlayModFile Include="%(_PlayModOutput.RootDir)%(_PlayModOutput.Directory)*.dll;%(_PlayModOutput.RootDir)%(_PlayModOutput.Directory)*.pdb"
+                   ModName="%(_PlayModOutput.ModName)" />
+      <PlayModFile Include="@(_PlayModOutput->'%(RootDir)%(Directory)meitou.json')" />
     </ItemGroup>
   </Target>
 

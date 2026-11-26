@@ -1,10 +1,14 @@
 <Solution>
   <Project Path="Play/Play.csproj" />
   <Folder Name="/LogisticsCore/">
+    <Project Path="LogisticsCore/LogisticsCore.csproj" />
+    <Project Path="LogisticsCore.Contracts/LogisticsCore.Contracts.csproj" />
+    <Project Path="LogisticsCore.Tests/LogisticsCore.Tests.csproj" />
     <Project Path="LogisticsEdges/LogisticsEdges.csproj" />
     <Project Path="LogisticsEdges.Tests/LogisticsEdges.Tests.csproj" />
     <Project Path="LogisticsSeed/LogisticsSeed.csproj" />
     <Project Path="LogisticsSeed.Tests/LogisticsSeed.Tests.csproj" />
+    <Project Path="LogisticsRunner/LogisticsRunner.csproj" />
   </Folder>
   <Folder Name="/engine/">
     <Project Path="engine/src/Meitou.Core/Meitou.Core.csproj" />

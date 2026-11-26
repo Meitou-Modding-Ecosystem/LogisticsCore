@@ -1,0 +1,29 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <!--
+    The logistics.core mod (docs/logistics-core.md): the node network, allowed owners, captures, the refused-flip penalty, events and the save.
+    Exports LogisticsCore.Contracts (meitou.json "assemblies"); LogisticsSeed ships beside it as a private DLL. Built against the game's assemblies,
+    never copied: the game loads them.
+  -->
+
+  <PropertyGroup>
+    <AssemblyName>LogisticsCore</AssemblyName>
+    <RootNamespace>Logistics.Core</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="$(MeitouEngineDir)src/Meitou.Core/Meitou.Core.csproj" Private="false" />
+    <ProjectReference Include="$(MeitouEngineDir)src/Meitou.Data/Meitou.Data.csproj" Private="false" />
+    <ProjectReference Include="$(MeitouEngineDir)src/Meitou.Simulation/Meitou.Simulation.csproj" Private="false" />
+    <ProjectReference Include="$(MeitouEngineDir)src/Meitou.Game/Meitou.Game.csproj" Private="false" />
+    <ProjectReference Include="../LogisticsCore.Contracts/LogisticsCore.Contracts.csproj" />
+    <ProjectReference Include="../LogisticsSeed/LogisticsSeed.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="meitou.json" CopyToOutputDirectory="PreserveNewest" />
+    <InternalsVisibleTo Include="LogisticsCore.Tests" />
+    <InternalsVisibleTo Include="LogisticsRunner" />
+  </ItemGroup>
+
+</Project>
