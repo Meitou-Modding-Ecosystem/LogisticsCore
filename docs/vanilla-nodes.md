@@ -3,7 +3,7 @@
 **Status: built; the first part of Logistics Core (Meitou-Modding-Ecosystem/RivalryCore#59).** A small library, `LogisticsSeed` (namespace
 `Logistics.Seed`), that turns the loaded game's placed towns into nodes: each with its stable id, its owner, and the owners the game's own town
 versions allow. It is the "every node needs a list of possible owners" gap from Meitou-Modding-Ecosystem/RivalryCore#59, filled from vanilla data, so
-mods extend real lists rather than guess. Not a mod yet: the framework builds on it. Owner: @aaallleeeccc.
+mods extend real lists rather than guess. The `logistics.core` mod seeds its network from it ([logistics-core.md](logistics-core.md)). Owner: @aaallleeeccc.
 
 ## Use
 

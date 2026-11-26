@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <!--
+    The headless balance runner (docs/balance-runner.md): runs a Logistics Core network hour by hour without the game, on a synthetic map, under a
+    policy (a stand-in for War Orchestration and its implementations), and reports per-day numbers and the state hash. Seeding the real map is
+    still to be agreed (Meitou-Modding-Ecosystem/RivalryCore#106, #117).
+  -->
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <IsPackable>false</IsPackable>
+    <RootNamespace>Logistics.Runner</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="$(MeitouEngineDir)src/Meitou.Simulation/Meitou.Simulation.csproj" />
+    <ProjectReference Include="../LogisticsCore/LogisticsCore.csproj" />
+  </ItemGroup>
+
+</Project>

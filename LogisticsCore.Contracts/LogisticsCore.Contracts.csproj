@@ -1,0 +1,14 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <!--
+    Logistics Core's contract (docs/logistics-core.md): the interfaces, records and ids dependents compile against, and the only assembly
+    logistics.core exports. Versioned by the mod's SemVer: a breaking change here is a major bump. No engine types, so dependents and the headless
+    runner read it without the game.
+  -->
+
+  <PropertyGroup>
+    <AssemblyName>LogisticsCore.Contracts</AssemblyName>
+    <RootNamespace>Logistics</RootNamespace>
+  </PropertyGroup>
+
+</Project>
